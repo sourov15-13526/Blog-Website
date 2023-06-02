@@ -1,0 +1,45 @@
+{%extends 'base.html' %} {%block title%} Welcome to Iblogs {%endblock%} {%block content%}
+
+
+
+<!-- <div class="container-custom">
+    {% for person in persons %}
+    <div class="col l6">
+        <div class="img-container">
+            <img src="{{ person.photo_url }}" class="responsive-img" style="max-height:35%;width:40%;object-fit:cover;" alt="">
+        </div>
+    </div>
+
+    <div class="col l6">
+        <div class="collection">
+            <p>name : {{ person.name }}</p>
+        </div>
+
+    </div>
+    <div>
+        <p>description : {{ person.bio }}</p>
+    </div>
+
+    {%endfor%}
+
+
+</div> -->
+
+<div class="container-custom">
+    {% for person in persons %}
+    <div class="col l6">
+        <div class="img-container">
+            <img src="{{ person.photo_url }}" class="responsive-img" style="max-height:30%;width:40%;height:450px;object-fit:cover;" alt="">
+        </div>
+    </div>
+
+    <div class="col l6">
+        <div class="collection">
+            <p><strong>Name:</strong> {{ person.name }}</p>
+            <p><strong>Description:</strong> {{ person.bio }}</p>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{%endblock%}
